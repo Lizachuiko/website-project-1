@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .wrapper {
+            height: 100%;
+            
+        }
+        .maincontent {
+            height: 100%;
+            width: 100%;
+        }
+        .page {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        .section-1 {
+            background-color: #80898e;
+            background-size: cover;
+            background-image: url("Rectangle 11.png"); 
+            display:flex;
+            flex-direction: column;
+        }
+        .container {
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            margin-left: 80px;
+            margin-top: 5px;
+            display: block;
+            height:80px;
+            width: 100px;
+            background: url("logo.svg") no-repeat 100% 100%;
+        }
+        .menu {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+            width: 700px;
+            margin-right: 50px;
+            margin-left: 201px;
+        }
+        .menu-item {
+           line-height: 30px;
+           font-size: 13px;
+            font-family: "Ubuntu";
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: right;
+        }
+        .order {
+            background-color: #c1401e;
+            border-radius: 5%;
+            padding:  5px 15px;
+        }
+
+        .main {
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        
+        
+        .burger {
+            display: block;
+            height:500px;
+            width: 500px;
+            background:
+                url("drops.svg")  no-repeat ,
+                url("bur pic.png") no-repeat ;
+            background-position: 30% 30%,50% 50%;
+        }
+        .burger-text {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .text-1 {
+            display:block;
+            height: 90px;
+            line-height: 85px;
+           font-size: 72px;
+            font-family: "Gagalin Regular";
+            color:#f9b43b;
+            text-transform: uppercase;
+            text-align: left;
+        }
+        .text-2 {
+            display:block;
+            height: 140px;
+            line-height: 85px;
+           font-size: 65px;
+            font-family: "Lifehack Medium";
+            color:#ffffff;
+            text-align: left;
+        }
+    
+        .sidebar {
+            margin-left:100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+           align-self: flex-start;
+           
+                 
+        }
+        .navbar > div {
+            height:10px;
+            width: 10px;
+            position: relative;
+            margin-bottom:15px;
+        }
+        .circle-inner {
+            border: 3px solid white;
+            background-color: transparent;
+            height: 0px;
+           border-radius:50%;
+            width: 0px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+          }
+          
+          .circle {
+            border: 1px solid white;
+            background-color: transparent;
+            height: 10px;
+           border-radius:50%;
+            width: 10px;
+            position: absolute;
+            left: 7px;
+            top: 7px;
+            height: 10px;
+          }
+         
+        }
+        .footer {
+            display: block;
+           
+        }
+        .arrow {
+            display: block;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        <link rel="stylesheet" href="normalize.css">
+
+        @font-face {
+            font-family: "Ubuntu Mediums";
+            src: url("C:\Users\Liza Chuiko\Desktop\Новая папка\Ubuntu-Medium.ttf" 
+                format("ttf");
+        }
+        @font-face {
+            font-family: "Gagalin-Regular";
+            src: url("C:\Users\Liza Chuiko\Desktop\Новая папка\Gagalin-Regular.otf" 
+                format("otf");
+        }
+        @font-face {
+            font-family: "Lifehack Medium";
+            src: url("C:\Users\Liza Chuiko\Desktop\Новая папка\Lifehack Medium.otf" 
+                format("otf");
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="maincontent">
+        <section class="page section-1">
+                <header class="header">
+                    <div class="container">
+                        <div class="header__left">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="header__right">
+                            <nav class="menu">
+                                <div class="menu-item">О НАС</div>
+                                <div class="menu-item">•</div>
+                                <div class="menu-item">БУРГЕРЫ</div>
+                                <div class="menu-item">•</div>
+                                <div class="menu-item">КОМАНДА</div>
+                                <div class="menu-item">•</div>
+                                <div class="menu-item">МЕНЮ</div>
+                                <div class="menu-item">•</div>
+                                <div class="menu-item">ОТЗЫВЫ</div>
+                                <div class="menu-item">•</div>
+                                <div class="menu-item">КОНТАКТЫ</div>
+                                <div class="menu-item order">ЗАКАЗАТЬ</div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <section class="content">
+                    <div class="container">
+                        <main class="main">
+                            
+                                <div class="burger"></div>
+                                <div class="burger-text">
+                                    <div class="text text-1">МЫ ДЕЛАЕМ</div>
+                                    <div class="text-2">натуральные<br>бургеры</div>
+                                </div>
+                            
+                        </main>
+                        <aside class="sidebar">
+                            <nav class="navbar">
+                                    <div>
+                                        <div class="circle"></div>
+                                        <div class="circle-inner"></div>
+                                    </div>
+                                    <div>
+                                        <div class="circle-inner"></div>
+                                    </div>
+                                    <div>
+                                        <div class="circle-inner"></div>
+                                    </div>
+                                    <div>
+                                        <div class="circle-inner"></div>
+                                    </div>
+                                    <div>
+                                        <div class="circle-inner"></div>
+                                    </div>
+                                    <div>
+                                        <div class="circle-inner"></div>
+                                    </div>
+                                    <div>
+                                        <div class="circle-inner"></div>
+                                    </div>
+                            </nav>
+                        </aside>
+                    </div>
+                </section>
+                <footer class="footer">
+                    <img class="arrow" src="arrow-scroll.png" alt="arrow-scroll-down">
+                </footer>
+        </section>
+        <section class="page section-2">
+           <header class="header-2">
+               <div class="content-2">
+                   <h1 class="text text-3">мы лучшие</h1>
+               </div>
+           </header>
+           <main class="content"> <!-- надо следить за флексом у одинаковых классов -->
+                <section class="part part-1">
+                    <div class="pic pic-1"></div>
+                    <div class="pic pic-1"></div>
+                    <div class="pic pic-1"></div>
+                </section>
+                <section class="part part-2">
+                    
+                </section>
+                <section class="part part-2">
+                        
+                </section>
+            </main>
+        </section>
+        <section class="page section-3">
+                <div class="wrapper"></div>
+
+        </section>
+    </div>
+</div>
+</body>
+</html>
