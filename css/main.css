@@ -1,0 +1,416 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Ubuntu Mediums";
+  src: url("C:UsersLiza ChuikoÞsktopprojectontsUbuntu-Medium.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Gagalin-Regular";
+  src: url("C:UsersLiza ChuikoÞsktopprojectontsGagalin-Regular.otf") format("otf"); }
+
+@font-face {
+  font-family: "Lifehack Medium";
+  src: url("C:UsersLiza ChuikoÞsktopprojectontsLifehack Medium.otf") format("otf"); }
+
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url("C:UsersLiza ChuikoÞsktopprojectontsUbuntu-Light.ttf") format("ttf"); }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.maincontent {
+  height: 100%;
+  min-height: 650px; }
+
+.section {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.hero {
+  background-color: #80898e;
+  background-size: cover;
+  background-image: url("../img/bg-hero.png");
+  background-position: 50% 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.logo {
+  margin-left: 80px;
+  margin-top: 5px;
+  display: block;
+  height: 80px;
+  width: 100px;
+  background: url("../img/logo.svg") no-repeat 100% 100%; }
+
+.menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  width: 700px;
+  margin-right: 50px;
+  margin-left: 201px; }
+
+.menu-item {
+  display: inline-block;
+  line-height: 30px;
+  font-size: 13px;
+  font-family: "Ubuntu";
+  color: white;
+  text-transform: uppercase;
+  text-align: right; }
+  .menu-item:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: ' ';
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #fff;
+    margin: 0 12px; }
+  .menu-item:nth-of-type(6):after {
+    display: none; }
+  .menu-item:nth-of-type(7):after {
+    display: none; }
+
+.nav__link, .order-link {
+  text-decoration: none;
+  color: white; }
+
+.button__order {
+  padding: 5px 15px;
+  background: none;
+  border: none; }
+  .button__order:hover {
+    background-color: #c1401e;
+    border-radius: 5%;
+    padding: 5px 15px; }
+
+.main-part {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.burger {
+  height: 450px;
+  width: 450px;
+  background: url("../img/drops.svg") no-repeat, url("../img/bur pic.png") no-repeat;
+  background-position: 30% 30%,50% 50%;
+  margin-right: 10px; }
+
+.burger-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.text {
+  display: block;
+  height: 90px;
+  line-height: 85px;
+  font-size: 72px;
+  font-family: "Gagalin Regular";
+  text-transform: uppercase;
+  text-align: left; }
+
+.text-1 {
+  color: #f9b43b; }
+
+.text-2 {
+  display: block;
+  height: 140px;
+  line-height: 85px;
+  font-size: 65px;
+  font-family: "Lifehack Medium";
+  color: #ffffff;
+  text-align: left; }
+
+.sidebar {
+  margin-left: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
+.list-scroll {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: relative; }
+
+.list-item {
+  border: 3px solid white;
+  background-color: white;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  list-style: none;
+  margin-bottom: 15px;
+  position: relative; }
+
+li:first-child:after {
+  content: "";
+  border: 1px solid white;
+  background-color: transparent;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  left: -8px; }
+
+.arrow {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px; }
+
+.best {
+  background-color: #f5f2ed;
+  background-size: cover;
+  background-image: url("../img/bg-best.png");
+  background-position: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.text-3 {
+  /* прозрачность*/
+  color: #2f3234;
+  text-align: center;
+  display: block;
+  margin-top: 85px; }
+
+.part {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 180px;
+  margin-right: 20px;
+  margin-left: 20px; }
+
+.pic {
+  height: 100px;
+  width: 110px; }
+
+.pic-1 {
+  background: url("../img/meat.svg") no-repeat 50% 50%; }
+
+.pic-2 {
+  background: url("../img/hand.svg") no-repeat 50% 50%; }
+
+.pic-3 {
+  background: url("../img/natural.svg") no-repeat 50% 50%; }
+
+.caption-big {
+  display: block;
+  height: 46px;
+  line-height: 28.11px;
+  font-size: 24.1px;
+  font-family: "Lifehack Medium";
+  color: #2f3234;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px; }
+
+.caption-small {
+  display: block;
+  height: 24px;
+  width: 290px;
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Ubuntu Light";
+  color: #2f3234;
+  text-align: center; }
+
+.review {
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-image: url("../img/bg-review.png");
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.main__review {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 52px;
+  left: 350px;
+  color: white; }
+
+.review__h1 {
+  display: block;
+  font-family: 'Gagalin Regular';
+  font-size: 14px;
+  line-height: 2.008;
+  text-align: left;
+  -moz-transform: matrix(0.99883, 0, 0, 1.00409, 0, 0);
+  -webkit-transform: matrix(0.99883, 0, 0, 1.00409, 0, 0);
+  -ms-transform: matrix(0.99883, 0, 0, 1.00409, 0, 0);
+  text-transform: uppercase; }
+
+.review__p {
+  font-size: 14px;
+  font-family: "Ubuntu Light";
+  line-height: 1.714;
+  width: 222px;
+  height: 133px; }
+
+.button__more {
+  width: 110px;
+  height: 35px;
+  font-size: 13px;
+  font-family: "Ubuntu Medium";
+  text-transform: uppercase;
+  line-height: 2.308;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f3234; }
+  .button__more:hover {
+    background-color: #1f2122; }
+
+.more-link {
+  text-decoration: none;
+  color: white; }
+
+/*# sourceMappingURL=main.css.map */

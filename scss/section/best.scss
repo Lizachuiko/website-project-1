@@ -1,0 +1,60 @@
+.best{
+  background-color: #f5f2ed;
+  background-size: cover;
+  background-image: url("../img/bg-best.png");
+  background-position: center;
+  display:flex;
+  flex-direction: column;
+}
+.text-3 { /* прозрачность*/
+  color:#2f3234;
+  text-align: center;
+  display:block;
+  margin-top: 85px; 
+}
+
+.part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 180px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.pic {
+  
+  height: 100px;
+  width: 110px;
+  
+}
+.pic-1 {
+  background: url("../img/meat.svg") no-repeat 50% 50%;
+}
+.pic-2 {
+  background: url("../img/hand.svg") no-repeat 50% 50%;
+}
+.pic-3 {
+  background: url("../img/natural.svg") no-repeat 50% 50%;
+}
+.caption-big {
+  display:block;
+  height: 46px;
+  line-height: 28.11px;
+  font-size: 24.1px;
+  font-family: "Lifehack Medium";
+  color:#2f3234;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.caption-small {
+  display:block;
+  height: 24px;
+  width: 290px; 
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Ubuntu Light";
+  color:#2f3234;
+  text-align: center;
+}
