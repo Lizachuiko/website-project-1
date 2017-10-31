@@ -1,0 +1,103 @@
+.team {
+    background-color: #c0afaa;
+    background-size: cover;
+    background-image: url("../img/bg-team.png");
+    background-position: top left ;
+    position: relative;
+  }
+.team__section {
+  background-image: url("../img/team-section.png");
+  position: absolute;
+  top:0;
+  right:0;
+  width:49%;
+  height: 100%;
+
+}
+.team__section__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+.team__section-team {
+  color: $yellow;
+}
+.team__ACCORDEON {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.team__ACCORDEON__member {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 55px;
+  .team__ACCORDEON__member-hidden {
+    .team__ACCORDEON__member-person {
+      height: 115px;
+    }
+    .team__ACCORDEON__member-link {
+      color: $yellow;
+    }
+    .team__ACCORDEON__member-arrow {
+      background: url("../img/team-arrow-up.png") no-repeat 50% 50%;
+    }
+  } 
+}
+.team__ACCORDEON__member-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.team__ACCORDEON__member-arrow {
+  background: url("../img/team-arrow-down.png") no-repeat 50% 50%;
+  background-size: 10px 10px;
+  display: block;
+  width:10px;
+  height:10px;
+}
+.team__ACCORDEON__member-link {
+    font-size: 14px;
+    font-family: "Gagalin";
+    color: white;
+    line-height: 2.008;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.team__ACCORDEON__member-person {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height:0;
+  overflow: hidden;
+}
+
+.team__ACCORDEON__member-avatar {
+  background: url("../img/team-avatar.png") no-repeat 50% 50%;
+  width: 100px;
+  height: 100px;
+
+}
+.team__ACCORDEON__member-info {
+  padding: 10px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-family: "Ubuntu";
+  color: rgb(255, 255, 255);
+  line-height: 1.714;
+}
+.team__ACCORDEON__member-job {
+  font-weight: bold;
+}
+.team__ACCORDEON__member-description {
+  padding-top: 10px;
+}

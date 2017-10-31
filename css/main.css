@@ -1,19 +1,39 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Ubuntu Mediums";
-  src: url("C:UsersLiza ChuikoÞsktopprojectontsUbuntu-Medium.ttf") format("ttf"); }
+  font-family: 'ubuntubold';
+  src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu-b-webfont.woff") format("woff"), url("../fonts/ubuntu-b-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
-  font-family: "Gagalin-Regular";
-  src: url("C:UsersLiza ChuikoÞsktopprojectontsGagalin-Regular.otf") format("otf"); }
+  font-family: 'ubuntulight';
+  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff"), url("../fonts/ubuntu-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-  font-family: "Lifehack Medium";
-  src: url("C:UsersLiza ChuikoÞsktopprojectontsLifehack Medium.otf") format("otf"); }
+  font-family: 'ubuntumedium';
+  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff"), url("../fonts/ubuntu-medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-  font-family: "Ubuntu Light";
-  src: url("C:UsersLiza ChuikoÞsktopprojectontsUbuntu-Light.ttf") format("ttf"); }
+  font-family: 'ubunturegular';
+  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff"), url("../fonts/ubuntu-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'lifehack';
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff"), url("../fonts/lifehack_medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'gagalin';
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff"), url("../fonts/gagalin-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 html,
 body {
@@ -55,6 +75,16 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.visually_hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
 .hero {
   background-color: #80898e;
   background-size: cover;
@@ -74,7 +104,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.logo {
+.hero__header__left-logo {
   margin-left: 80px;
   margin-top: 5px;
   display: block;
@@ -82,7 +112,7 @@ body {
   width: 100px;
   background: url("../img/logo.svg") no-repeat 100% 100%; }
 
-.menu {
+.hero__header__right-nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,15 +133,16 @@ body {
   margin-right: 50px;
   margin-left: 201px; }
 
-.menu-item {
+.nav-item {
   display: inline-block;
   line-height: 30px;
+  vertical-align: middle;
   font-size: 13px;
-  font-family: "Ubuntu";
+  font-family: "ubuntumedium";
   color: white;
   text-transform: uppercase;
   text-align: right; }
-  .menu-item:after {
+  .nav-item:after {
     display: inline-block;
     vertical-align: middle;
     content: ' ';
@@ -119,10 +150,10 @@ body {
     height: 5px;
     border-radius: 2.5px;
     background-color: #fff;
-    margin: 0 12px; }
-  .menu-item:nth-of-type(6):after {
+    margin: 0 19px; }
+  .nav-item:nth-of-type(6):after {
     display: none; }
-  .menu-item:nth-of-type(7):after {
+  .nav-item:nth-of-type(7):after {
     display: none; }
 
 .nav__link, .order-link {
@@ -130,15 +161,17 @@ body {
   color: white; }
 
 .button__order {
+  margin-left: 15px;
   padding: 5px 15px;
-  background: none;
-  border: none; }
+  border: none;
+  background-color: #c1401e;
+  border-radius: 5%; }
   .button__order:hover {
-    background-color: #c1401e;
+    background-color: #7f2a14;
     border-radius: 5%;
     padding: 5px 15px; }
 
-.main-part {
+.hero__main-part {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,14 +186,14 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.burger {
+.hero__main-part__burger {
   height: 450px;
   width: 450px;
   background: url("../img/drops.svg") no-repeat, url("../img/bur pic.png") no-repeat;
   background-position: 30% 30%,50% 50%;
   margin-right: 10px; }
 
-.burger-text {
+.hero__main-part__burger-text {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -184,23 +217,23 @@ body {
   height: 90px;
   line-height: 85px;
   font-size: 72px;
-  font-family: "Gagalin Regular";
+  font-family: "gagalin";
   text-transform: uppercase;
   text-align: left; }
 
-.text-1 {
+.hero__main-part__text-1 {
   color: #f9b43b; }
 
-.text-2 {
+.hero__main-part__text-2 {
   display: block;
   height: 140px;
   line-height: 85px;
   font-size: 65px;
-  font-family: "Lifehack Medium";
+  font-family: "lifehack";
   color: #ffffff;
   text-align: left; }
 
-.sidebar {
+.hero__sidebar {
   margin-left: 100px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -222,7 +255,7 @@ body {
   -ms-flex-item-align: start;
   align-self: flex-start; }
 
-.list-scroll {
+.hero__sidebar-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,7 +270,7 @@ body {
   justify-content: space-around;
   position: relative; }
 
-.list-item {
+.hero__sidebar-list-item {
   border: 3px solid white;
   background-color: white;
   width: 0px;
@@ -258,7 +291,7 @@ li:first-child:after {
   top: -8px;
   left: -8px; }
 
-.arrow {
+.hero__footer-arrow {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px; }
@@ -267,7 +300,7 @@ li:first-child:after {
   background-color: #f5f2ed;
   background-size: cover;
   background-image: url("../img/bg-best.png");
-  background-position: center;
+  background-position: bottom;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -278,14 +311,13 @@ li:first-child:after {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.text-3 {
+.best__header-text-3 {
   /* прозрачность*/
   color: #2f3234;
   text-align: center;
-  display: block;
-  margin-top: 85px; }
+  display: block; }
 
-.part {
+.best__main__part {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -306,7 +338,7 @@ li:first-child:after {
   margin-right: 20px;
   margin-left: 20px; }
 
-.pic {
+.best__main__part-pic {
   height: 100px;
   width: 110px; }
 
@@ -319,50 +351,127 @@ li:first-child:after {
 .pic-3 {
   background: url("../img/natural.svg") no-repeat 50% 50%; }
 
-.caption-big {
+.best__main__part-caption-big {
   display: block;
   height: 46px;
   line-height: 28.11px;
   font-size: 24.1px;
-  font-family: "Lifehack Medium";
+  font-family: "lifehack";
   color: #2f3234;
   text-align: center;
   margin-bottom: 25px;
   margin-top: 25px; }
 
-.caption-small {
+.best__main__part-caption-small {
   display: block;
   height: 24px;
   width: 290px;
   line-height: 24px;
   font-size: 14px;
-  font-family: "Ubuntu Light";
+  font-family: "ubuntulight";
   color: #2f3234;
   text-align: center; }
 
-.review {
-  background-color: #ffffff;
-  background-size: 100% auto;
-  background-image: url("../img/bg-review.png");
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  display: -webkit-box;
+.review__container {
+  height: 100%;
+  width: 100%; }
+
+.reviews__list {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100vh; }
 
-.main__review {
+.reviews__list__item {
+  display: block;
+  width: 25%;
+  height: 50%;
+  overflow: hidden;
+  position: relative; }
+
+.reviews__list__item-avatar {
+  -webkit-filter: saturate(0%);
+  filter: saturate(0%);
+  height: 100%; }
+
+.reviews__list__item-info {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  color: #fff;
+  background-color: rgba(20, 20, 20, 0.7); }
+
+.reviews__list__item:hover .reviews__list__item-info {
+  opacity: 1; }
+
+.reviews__list__item-info-name {
+  font-size: 14px;
+  line-height: 28.11px;
+  font-family: 'gagalin';
+  margin: 50px 0 20px 30px; }
+
+.reviews__list__item-info-text {
+  font-size: 14px;
+  font-family: 'ubuntulight';
+  line-height: 24px;
+  margin: 0 30px 20px 20px; }
+
+.reviews__list__item-info-detail {
+  width: 110px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 4px;
+  background-color: #2f3234;
+  margin-left: 20px; }
+
+.reviews__list__item-info-detail a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'ubuntumedium';
+  text-transform: uppercase; }
+
+.reviews__list__item-info-detail:hover {
+  background-color: #1f2122; }
+
+.team {
+  background-color: #c0afaa;
+  background-size: cover;
+  background-image: url("../img/bg-team.png");
+  background-position: top left;
+  position: relative; }
+
+.team__section {
+  background-image: url("../img/team-section.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 49%;
+  height: 100%; }
+
+.team__section__about {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -372,45 +481,141 @@ li:first-child:after {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  position: absolute;
-  top: 52px;
-  left: 350px;
-  color: white; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 90px; }
 
-.review__h1 {
+.team__section-team {
+  color: #f8b43a; }
+
+.team__ACCORDEON {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.team__ACCORDEON__member {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  min-height: 55px; }
+  .team__ACCORDEON__member .team__ACCORDEON__member-hidden .team__ACCORDEON__member-person {
+    height: 115px; }
+  .team__ACCORDEON__member .team__ACCORDEON__member-hidden .team__ACCORDEON__member-link {
+    color: #f8b43a; }
+  .team__ACCORDEON__member .team__ACCORDEON__member-hidden .team__ACCORDEON__member-arrow {
+    background: url("../img/team-arrow-up.png") no-repeat 50% 50%; }
+
+.team__ACCORDEON__member-name {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
+
+.team__ACCORDEON__member-arrow {
+  background: url("../img/team-arrow-down.png") no-repeat 50% 50%;
+  background-size: 10px 10px;
   display: block;
-  font-family: 'Gagalin Regular';
+  width: 10px;
+  height: 10px; }
+
+.team__ACCORDEON__member-link {
   font-size: 14px;
+  font-family: "Gagalin";
+  color: white;
   line-height: 2.008;
   text-align: left;
-  -moz-transform: matrix(0.99883, 0, 0, 1.00409, 0, 0);
-  -webkit-transform: matrix(0.99883, 0, 0, 1.00409, 0, 0);
-  -ms-transform: matrix(0.99883, 0, 0, 1.00409, 0, 0);
-  text-transform: uppercase; }
-
-.review__p {
-  font-size: 14px;
-  font-family: "Ubuntu Light";
-  line-height: 1.714;
-  width: 222px;
-  height: 133px; }
-
-.button__more {
-  width: 110px;
-  height: 35px;
-  font-size: 13px;
-  font-family: "Ubuntu Medium";
-  text-transform: uppercase;
-  line-height: 2.308;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-  background-color: #2f3234; }
-  .button__more:hover {
-    background-color: #1f2122; }
-
-.more-link {
   text-decoration: none;
-  color: white; }
+  margin-left: 10px; }
+
+.team__ACCORDEON__member-person {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 0;
+  overflow: hidden; }
+
+.team__ACCORDEON__member-avatar {
+  background: url("../img/team-avatar.png") no-repeat 50% 50%;
+  width: 100px;
+  height: 100px; }
+
+.team__ACCORDEON__member-info {
+  padding: 10px;
+  width: 220px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-family: "Ubuntu";
+  color: white;
+  line-height: 1.714; }
+
+.team__ACCORDEON__member-job {
+  font-weight: bold; }
+
+.team__ACCORDEON__member-description {
+  padding-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */

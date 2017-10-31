@@ -2,18 +2,17 @@
   background-color: #f5f2ed;
   background-size: cover;
   background-image: url("../img/bg-best.png");
-  background-position: center;
+  background-position: bottom;
   display:flex;
   flex-direction: column;
 }
-.text-3 { /* прозрачность*/
+.best__header-text-3 { /* прозрачность*/
   color:#2f3234;
   text-align: center;
   display:block;
-  margin-top: 85px; 
+  
 }
-
-.part {
+.best__main__part {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -22,11 +21,9 @@
   margin-right: 20px;
   margin-left: 20px;
 }
-.pic {
-  
+.best__main__part-pic {
   height: 100px;
   width: 110px;
-  
 }
 .pic-1 {
   background: url("../img/meat.svg") no-repeat 50% 50%;
@@ -37,24 +34,24 @@
 .pic-3 {
   background: url("../img/natural.svg") no-repeat 50% 50%;
 }
-.caption-big {
+.best__main__part-caption-big {
   display:block;
   height: 46px;
   line-height: 28.11px;
   font-size: 24.1px;
-  font-family: "Lifehack Medium";
+  font-family: "lifehack";
   color:#2f3234;
   text-align: center;
   margin-bottom: 25px;
   margin-top: 25px;
 }
-.caption-small {
+.best__main__part-caption-small {
   display:block;
   height: 24px;
   width: 290px; 
   line-height: 24px;
   font-size: 14px;
-  font-family: "Ubuntu Light";
+  font-family: "ubuntulight";
   color:#2f3234;
   text-align: center;
 }
