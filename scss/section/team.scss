@@ -35,18 +35,18 @@
   flex-direction: column;
   justify-content: space-around;
   min-height: 55px;
-  .team__ACCORDEON__member-hidden {
-    .team__ACCORDEON__member-person {
-      height: 115px;
-    }
-    .team__ACCORDEON__member-link {
-      color: $yellow;
-    }
-    .team__ACCORDEON__member-arrow {
-      background: url("../img/team-arrow-up.png") no-repeat 50% 50%;
-    }
-  } 
 }
+.team__ACCORDEON__member-hidden {
+  .team__ACCORDEON__member-person {
+    height: 115px;
+  }
+  .team__ACCORDEON__member-link {
+    color: $yellow;
+  }
+  .team__ACCORDEON__member-arrow {
+    background: url("../img/team-arrow-up.png") no-repeat 50% 50%;
+  }
+} 
 .team__ACCORDEON__member-name {
   display: flex;
   flex-direction: row;

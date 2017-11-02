@@ -1,6 +1,7 @@
 // config
 @import "config/variables";
 @import "config/mixins";
+@import "config/accordion";
 
 // base
 @import "layout/fonts";
@@ -12,3 +13,4 @@
 @import "section/best";
 @import "section/review";
 @import "section/team";
+@import "section/menu";
