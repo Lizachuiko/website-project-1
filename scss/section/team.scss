@@ -12,92 +12,230 @@
   right:0;
   width:49%;
   height: 100%;
-
+  @include tablets {
+    width:100%;
+  }
 }
 .team__section__about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  margin-top: rem(90px);
 }
 .team__section-team {
   color: $yellow;
 }
-.team__ACCORDEON {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.team__ACCORDEON__member {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  min-height: 55px;
-}
-.team__ACCORDEON__member-hidden {
-  .team__ACCORDEON__member-person {
-    height: 115px;
-  }
-  .team__ACCORDEON__member-link {
-    color: $yellow;
-  }
-  .team__ACCORDEON__member-arrow {
-    background: url("../img/team-arrow-up.png") no-repeat 50% 50%;
-  }
-} 
-.team__ACCORDEON__member-name {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-.team__ACCORDEON__member-arrow {
-  background: url("../img/team-arrow-down.png") no-repeat 50% 50%;
-  background-size: 10px 10px;
-  display: block;
-  width:10px;
-  height:10px;
-}
-.team__ACCORDEON__member-link {
-    font-size: 14px;
-    font-family: "Gagalin";
-    color: white;
-    line-height: 2.008;
-    text-align: left;
-    text-decoration: none;
-    margin-left: 10px;
+// .team__ACCORDEON {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+  
+  
+// }
+// .team__ACCORDEON__member {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   min-height: rem(55px);
+//   align-items: center;
+  
+//   @include tablets{
+//     align-items: center;
+//   }
+// }
+// .team__ACCORDEON__member-hidden {
+//   .team__ACCORDEON__member-person {
+//     height: rem(115px);
+//     @include tablets {
+//       height: rem(170px);
+//     }
+//   }
+//   .team__ACCORDEON__member-link {
+//     color: $yellow;
+//   }
+//   .team__ACCORDEON__member-arrow {
+//     background: url("../img/team-arrow-up.png") no-repeat 50% 50%;
+//   }
+// } 
+// .team__ACCORDEON__member-name {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   align-items: baseline;
+// }
+// .team__ACCORDEON__member-arrow {
+//   background: url("../img/team-arrow-down.png") no-repeat 50% 50%;
+//   background-size: rem(10px) rem(10px);
+//   display: block;
+//   width:rem(10px);
+//   height:rem(10px);
+// }
+// .team__ACCORDEON__member-link {
+//     font-size: rem(14px);
+//     font-family: "Gagalin";
+//     color: white;
+//     line-height: 2.008;
+//     text-align: left;
+//     text-decoration: none;
+//     margin-left: rem(10px);
+// }
+
+// .team__ACCORDEON__member-person {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   height:0;
+//   overflow: hidden;
+//   @include tablets {
+//     flex-direction: column;
+//     align-items: center;
+   
+//   }
+// }
+
+// .team__ACCORDEON__member-avatar {
+//   background: url("../img/team-avatar.png") no-repeat 50% 50%;
+//   min-width: rem(100px);
+//   min-height: rem(100px);
+//   @include tablets {
+//     min-width: rem(110px);
+//     min-height: rem(110px);
+//   }
+
+// }
+// .team__ACCORDEON__member-info {
+//   // padding: rem(10px);
+//   // width: rem(220px);
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   font-size: rem(14px);
+//   font-family: "Ubuntu";
+//   color: rgb(255, 255, 255);
+//   line-height: 1.714;
+//   @include tablets {
+//     align-items: center;
+//   }
+// }
+// .team__ACCORDEON__member-job {
+//   font-weight: bold;
+// }
+// .team__ACCORDEON__member-description {
+//   padding-top: rem(10px);
+// }
+.team-acco {
 }
 
-.team__ACCORDEON__member-person {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height:0;
-  overflow: hidden;
+.team-acco__item {
+  margin-bottom: rem(40px);
+  
+  
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.active {
+		.team-acco__trigger {
+			color: $yellow;
+
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
 }
 
-.team__ACCORDEON__member-avatar {
-  background: url("../img/team-avatar.png") no-repeat 50% 50%;
-  width: 100px;
-  height: 100px;
+.team-acco__trigger {
+	color: #fff;
+	font-size: rem(14px);
+	font-family: "gagalin";
+	text-decoration: none;
+	position: relative;
+  display: inline-flex;
+  margin-bottom: rem(20px);
+  align-items: center;  
+  
+  @include tablets() {
+    font-size: rem(25px);
+    
+    
+  }
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: rem(-18px);
+		top: rem(8px);
+		width: 0;
+    height: 0;
+	}
+
+	&:before {
+		border-top: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-bottom: rem(0px) solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+
+	&:after {
+		display: none;
+		border-bottom: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-top: rem(0px) solid transparent;
+  }
+  
 
 }
-.team__ACCORDEON__member-info {
-  padding: 10px;
-  width: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-size: 14px;
-  font-family: "Ubuntu";
-  color: rgb(255, 255, 255);
-  line-height: 1.714;
+
+.team-acco__content {
+	padding-top: rem(14px);
+  display: none;
+  // display: block;
+  &.active {
+    display: flex;
+    justify-content: center;
+  }
+  
+ 
 }
-.team__ACCORDEON__member-job {
-  font-weight: bold;
+
+.team-acco__pic {
+	// text-align: center;
+	width: 30%;
 }
-.team__ACCORDEON__member-description {
-  padding-top: 10px;
+
+.team-acco__img {
+	width: rem(100px);
+	height: rem(100px);
+	@include cover;
+	border-radius: 50%;
 }
+
+.team-acco__text {
+  width: 70%;
+  @include tablets {
+    // text-align: center;
+  }
+}
+
+.team-acco__pic, .team-acco__text {
+}
+
+.team-acco__title {
+	font-family:"ubuntubold";
+	font-size: rem(14px);
+	color: #fff;
+	margin-bottom: rem(14px);
+}
+
+.team-acco__text-content {
+	font-family:"ubuntulight";
+	color: #fff;
+	font-size: rem(14px);
+}
+

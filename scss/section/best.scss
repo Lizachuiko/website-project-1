@@ -12,18 +12,21 @@
   display:block;
   
 }
+
+
 .best__main__part {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 180px;
-  margin-right: 20px;
-  margin-left: 20px;
+  // margin-bottom: rem(180px);
+  margin-right: rem(20px);
+  margin-left: rem(20px);
+  width: 33.3%;
 }
 .best__main__part-pic {
-  height: 100px;
-  width: 110px;
+  height: rem(100px);
+  width: rem(110px);
 }
 .pic-1 {
   background: url("../img/meat.svg") no-repeat 50% 50%;
@@ -36,21 +39,21 @@
 }
 .best__main__part-caption-big {
   display:block;
-  height: 46px;
-  line-height: 28.11px;
-  font-size: 24.1px;
+  height: rem(46px);
+  line-height: rem(28.11px);
+  font-size: rem(24.1px);
   font-family: "lifehack";
   color:#2f3234;
   text-align: center;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: rem(25px);
+  margin-top: rem(25px);
 }
 .best__main__part-caption-small {
   display:block;
-  height: 24px;
-  width: 290px; 
-  line-height: 24px;
-  font-size: 14px;
+  height: rem(24px);
+  width: rem(290px); 
+  line-height: rem(24px);
+  font-size: rem(14px);
   font-family: "ubuntulight";
   color:#2f3234;
   text-align: center;

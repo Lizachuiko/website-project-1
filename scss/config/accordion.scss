@@ -25,9 +25,9 @@
     &__heading {
         position: relative;
         display: block;
-        padding: 15px;
+        padding: rem(15px);
         color:white;
-        font-size: 14px;
+        font-size: rem(14px);
         font-family: "Gagalin";
         
         line-height: 1.601;
@@ -41,20 +41,20 @@
                 box-sizing: border-box;
 
         // > .-icon {
-        //     margin-top: 3px;
+        //     margin-top: rem(3px);
         //     color: red;
-        //     font-size: 18px;
+        //     font-size: rem(18px);
         //     font-style: normal;
         //     font-weight: bold;
 
         //     &--right {
         //         float: right;
-        //         margin-left: 10px;
+        //         margin-left: rem(10px);
         //     }
 
         //     &--left {
         //         float: left;
-        //         margin-right: 10px;
+        //         margin-right: rem(10px);
         //     }
 
         //     &:before {
@@ -64,15 +64,15 @@
     }
 
     &__expander {
-        padding: 60px 30px;
+        padding: rem(60px) rem(30px);
         color: white;
-        font-size: 14px;
+        font-size: rem(14px);
         font-family: "ubuntulight";
         
         line-height: 1.714;
         
-        width: 471px;
-        height: 229px;
+        width: rem(471px);
+        height: rem(229px);
         background-color: transparent;
         // background-color: rgb(47, 50, 52);
         // opacity: 0.929;
@@ -90,8 +90,8 @@
 //     }
 
     &--horizontal {
-        height: 650px;
-        min-width: 240px;
+        height: rem(650px);
+        min-width: rem(240px);
     }
 
     &--horizontal &__panel {
@@ -103,15 +103,15 @@
     }
 
     &--horizontal &__heading {
-        width: 650px;
+        width: rem(650px);
         text-align: right;
         
 
-        // -webkit-transform: translateX(-100%) rotate(-90deg) translateZ(0px);
-        //    -moz-transform: translateX(-100%) rotate(-90deg) translateZ(0px);
-        //     -ms-transform: translateX(-100%) rotate(-90deg) translateZ(0px);
-        //      -o-transform: translateX(-100%) rotate(-90deg) translateZ(0px);
-                transform: translateX(-100%) rotate(-90deg) translateZ(0px);
+        // -webkit-transform: translateX(-100%) rotate(-90deg) translateZ(rem(0px));
+        //    -moz-transform: translateX(-100%) rotate(-90deg) translateZ(rem(0px));
+        //     -ms-transform: translateX(-100%) rotate(-90deg) translateZ(rem(0px));
+        //      -o-transform: translateX(-100%) rotate(-90deg) translateZ(rem(0px));
+                transform: translateX(-100%) rotate(-90deg) translateZ(rem(0px));
 
         // -webkit-transform-origin: right top 0;
         //    -moz-transform-origin: right top 0;
@@ -120,13 +120,13 @@
                 transform-origin: right top 0;
 
         & > .-icon {
-            right: 227px;
+            right: rem(227px);
 
-            // -webkit-transform: rotate(90deg) translateZ(0px);
-            //    -moz-transform: rotate(90deg) translateZ(0px);
-            //     -ms-transform: rotate(90deg) translateZ(0px);
-            //      -o-transform: rotate(90deg) translateZ(0px);
-                    transform: rotate(90deg) translateZ(0px);
+            // -webkit-transform: rotate(90deg) translateZ(rem(0px));
+            //    -moz-transform: rotate(90deg) translateZ(rem(0px));
+            //     -ms-transform: rotate(90deg) translateZ(rem(0px));
+            //      -o-transform: rotate(90deg) translateZ(rem(0px));
+                    transform: rotate(90deg) translateZ(rem(0px));
         }
     }
 
@@ -135,8 +135,8 @@
         top: 0;
         left: 0;
         height: 100%;
-        width: 450px;
-        margin-left: 50px;
+        width: rem(450px);
+        margin-left: rem(50px);
         overflow-y: auto;
         
 
@@ -145,11 +145,11 @@
     }
 
     // &--basic &--vertical &__panel {
-    //     border-bottom: 2px solid #edf1f2;
+    //     border-bottom: rem(2px) solid #edf1f2;
     // }
 
     // &--basic &--horizontal &__panel {
-    //     border-right: 2px solid #edf1f2;
+    //     border-right: rem(2px) solid #edf1f2;
     // }
 
     // &--basic &--active {
@@ -157,15 +157,15 @@
     // }
 
     // &--box &__panel {
-    //     border: 2px solid blue;
+    //     border: rem(2px) solid blue;
     // }
 
     &--box &--vertical &__panel {
-        margin-bottom: 10px;
+        margin-bottom: rem(10px);
     }
 
     &--box &--horizontal &__panel {
-        margin-right: 10px;
+        margin-right: rem(10px);
     }
 
     &--box &__heading {

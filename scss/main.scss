@@ -1,7 +1,23 @@
+
+  //colors
+  $orange: #e45028;
+  $yellow: #f9b43b;
+  $black: #2f3234;
+  $red: #e35028;
+  
+  // resolutions
+  $desktop: 1200px;
+  $laptop: 992px;
+  $tablets: 768px;
+  $phones: 480px;
+
+  // media
+@import "layout/media";
 // config
 @import "config/variables";
 @import "config/mixins";
 @import "config/accordion";
+@import "config/sprite";
 
 // base
 @import "layout/fonts";
@@ -14,3 +30,6 @@
 @import "section/review";
 @import "section/team";
 @import "section/menu";
+@import "section/order";
+@import "section/contacts"
+

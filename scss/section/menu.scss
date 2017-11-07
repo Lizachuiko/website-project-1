@@ -1,34 +1,112 @@
-.menu {
-    background-color: #b5babd;
-    background-size: cover;
-    background-image: url("../img/menu-bg.png");
-    background-position: center ;
-    position: relative;
-  }
-.menu__container {
-    position: relative;
+// .menu {
+//     background-color: #b5babd;
+//     background-size: cover;
+//     background-image: url("../img/menu-bg.png");
+//     background-position: center ;
+//     position: relative;
+//   }
+// .menu__container {
+//     position: relative;
    
-  }
-.menu__label {
-    position: absolute;
-    top: 110px;
-    left: 90px;
+//   }
+// .menu__label {
+//     position: absolute;
+//     top: rem(110px);
+//     left: rem(90px);
+//     color: white;
+// }
+// .menu__ACCORDEON, .example {
+//     position: absolute;
+//     min-height:rem(650px);
+//     min-width:rem(240px);
+//     right:rem(0px);
+//     top: rem(0px);
+//     background: #4c4e50;
+//     opacity: 0.929;
+//     display: flex;
+//     flex-direction: row-reverse;
+//     justify-content: flex-end;
+// }
+// .menu__ACCORDEON__diet {
+//     background: url("../img/menu-diet.png") no-repeat 50% 50%; 
+//     min-height:rem(650px);
+//     width:rem(80px);
+// }
+
+.menu {
+	background: url('../img/menu-bg.png') 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;
+	top: 10%;
+    left: 10%;
     color: white;
 }
-.menu__ACCORDEON, .example {
-    position: absolute;
-    min-height:650px;
-    min-width:240px;
-    right:0px;
-    top: 0px;
-    background: #4c4e50;
-    opacity: 0.929;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+
+.menu-acco {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+  display: flex;
 }
-.menu__ACCORDEON__diet {
-    background: url("../img/menu-diet.png") no-repeat 50% 50%; 
-    min-height:650px;
-    width:80px;
+
+.menu-acco__item {
+	height: 100%;
+
+	&.active {
+		.menu-acco__trigger-text {
+			color: $yellow;
+		}
+	}
+}
+
+.menu-acco__trigger {
+	width: rem(80px);
+	display: block;
+	height: 100%;
+	float: left;
+	@include cover;
+	text-decoration: none;
+  position: relative;
+}
+
+.menu-acco__trigger-text {
+	font-size: rem(40px);
+	color: #fff;
+	font-family: "gagalin";
+	text-align: center;
+	white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-20px);
+}
+
+.menu-acco__content {
+	height: 100%;
+	float: left;
+	background: rgba(#2f3234, .93);
+	width: 0;
+    overflow: hidden;
+    // position: relative;
+    &.active {
+        width: rem(550px);
+		// width: 50%;
+	}
+}
+
+.menu-acco__text {
+    font-family: "ubuntulight";
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+  line-height: 1.8;
+//   display: none;
 }

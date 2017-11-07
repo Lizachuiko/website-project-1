@@ -1,0 +1,88 @@
+@charset "UTF-8";
+.best {
+  background-color: #f5f2ed;
+  background-size: cover;
+  background-image: url("../img/bg-best.png");
+  background-position: bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.best__header-text-3 {
+  /* прозрачность*/
+  color: #2f3234;
+  text-align: center;
+  display: block; }
+
+.best__main__part {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 180px;
+  margin-right: 20px;
+  margin-left: 20px; }
+
+.best__main__part-pic {
+  height: 100px;
+  width: 110px; }
+
+.pic-1 {
+  background: url("../img/meat.svg") no-repeat 50% 50%; }
+
+.pic-2 {
+  background: url("../img/hand.svg") no-repeat 50% 50%; }
+
+.pic-3 {
+  background: url("../img/natural.svg") no-repeat 50% 50%; }
+
+.best__main__part-caption-big {
+  display: block;
+  height: 46px;
+  line-height: 28.11px;
+  font-size: 24.1px;
+  font-family: "lifehack";
+  color: #2f3234;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px; }
+
+.best__main__part-caption-small {
+  display: block;
+  height: 24px;
+  width: 290px;
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "ubuntulight";
+  color: #2f3234;
+  text-align: center; }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  fill: #5a5a5a;
+  width: 25px;
+  height: 25px; }
+  .icon .icon:hover {
+    fill: #fff; }
+  .icon .icon:first-child {
+    margin-left: 0; }
