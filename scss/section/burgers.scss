@@ -1,0 +1,117 @@
+.burgers {
+    background-color: orange;
+    background-size: cover;
+    background-image: url("../img/burgers-bg.png");
+  }
+
+.burgers__container {
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.burgers__right,
+.burgers__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    @include tablets {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
+.burgers__title {
+    color: white;
+   
+
+}
+
+.burgers__text {
+    font-size: rem(14px);
+	font-family: 'ubuntulight';
+    line-height: rem(24px);
+    color: #fff;
+    text-align: left;
+    @include tablets {
+        text-align: center;
+        // padding: rem(0px) (70px);
+    }
+}
+
+.burgers__order {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.burgers__rub {
+    font-size: rem(30px);
+    line-height: rem(28.11px);
+}
+
+.burgers__price, .burgers__rub {
+    color: $orange;
+}
+
+.burgers__content {
+    position: relative;
+
+}
+.burgers__img {
+    width:100%;
+    display: block;
+    // margin: auto;
+    @include tablets {
+        width:80%;
+        margin: auto;
+    }
+}
+.burgers__composition {
+    background: url("../img/burgers-make-up.png") no-repeat center;
+    position: absolute;
+    top: rem(-50px);
+    left: rem(50px) ;
+    width:rem(90px) ;
+    height: rem(90px) ;
+
+    &:hover {
+        background: url("../img/burgers-make-up-open.png") no-repeat center;
+        width:rem(360px) ;
+        height: rem(330px) ;
+    }
+    @include tablets {
+        top: rem(-44px);
+        left: rem(13px) ;
+        width:rem(100px) ;
+        height: rem(100px) ;
+    }
+
+}
+
+.burgers__kkal {
+    // vertical-align: bottom;
+    position: absolute;
+    bottom: rem(-70px);
+    left: rem(50px) ;
+    // margin-left: rem(30px);
+    padding-top: rem(25px);
+    height: rem(80px);
+    width: rem(70px);
+    text-align: center;
+    font-size: rem(14px);
+    font-family: "gagalin";
+    color: rgba(255, 255, 255, 0.502);
+    line-height: rem(30px);
+    background: url("../img/burgers-kkal.png") no-repeat top center;
+
+    @include tablets {
+        bottom: rem(220px);
+        left: rem(450px) ;
+    }
+}

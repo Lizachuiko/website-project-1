@@ -3,9 +3,16 @@
   background-size: cover;
   background-image: url("../img/bg-best.png");
   background-position: bottom;
+  
+}
+.best__container {
   display:flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: rem(50px);
 }
+
 .best__header-text-3 { /* прозрачность*/
   color:#2f3234;
   text-align: center;
@@ -13,11 +20,16 @@
   
 }
 
+.best__main {
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
 .best__main__part {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   // margin-bottom: rem(180px);
   margin-right: rem(20px);
@@ -39,7 +51,7 @@
 }
 .best__main__part-caption-big {
   display:block;
-  height: rem(46px);
+  // height: rem(46px);
   line-height: rem(28.11px);
   font-size: rem(24.1px);
   font-family: "lifehack";
@@ -50,8 +62,8 @@
 }
 .best__main__part-caption-small {
   display:block;
-  height: rem(24px);
-  width: rem(290px); 
+  // height: rem(24px);
+  // width: rem(290px); 
   line-height: rem(24px);
   font-size: rem(14px);
   font-family: "ubuntulight";

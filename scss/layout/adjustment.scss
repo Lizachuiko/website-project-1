@@ -20,7 +20,7 @@
 
 .button__order {
   margin-left: rem(15px);
-  padding:  rem(10px) rem(15px);
+  padding:  rem(10px) rem(20px);
   border: none;
   background-color: #c1401e;
   border-radius: rem(5px);
@@ -101,11 +101,15 @@
 }
 
 .text {
-  display:block;
-  height: rem(90px);
+  // display:block;
+  // height: rem(90px);
   line-height: rem(85px);
   font-size: rem(72px);
   font-family: "gagalin";
   text-transform: uppercase;
-  text-align: left;
+  // text-align: left;
+  @include tablets {
+    line-height: rem(65px);
+    font-size: rem(60px);
+}
 }

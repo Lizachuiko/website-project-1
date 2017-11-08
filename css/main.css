@@ -213,7 +213,7 @@ p {
 
 .button__order {
   margin-left: 0.9375rem;
-  padding: 0.625rem 0.9375rem;
+  padding: 0.625rem 1.25rem;
   border: none;
   background-color: #c1401e;
   border-radius: 0.3125rem;
@@ -270,13 +270,14 @@ p {
   margin-bottom: 0.3125rem; }
 
 .text {
-  display: block;
-  height: 5.625rem;
   line-height: 5.3125rem;
   font-size: 4.5rem;
   font-family: "gagalin";
-  text-transform: uppercase;
-  text-align: left; }
+  text-transform: uppercase; }
+  @media screen and (max-width: 768px) {
+    .text {
+      line-height: 4.0625rem;
+      font-size: 3.75rem; } }
 
 .hero {
   background-color: #80898e;
@@ -301,7 +302,8 @@ p {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 0.625rem; }
 
 .hero__header__left-logo {
   display: block;
@@ -419,7 +421,7 @@ p {
 .hamburger-menu-link__bars:after {
   bottom: 0; }
 
-.hero__main-part {
+.hero__main {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -438,7 +440,7 @@ p {
   -ms-flex-align: center;
   align-items: center; }
   @media screen and (max-width: 768px) {
-    .hero__main-part {
+    .hero__main {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
@@ -454,7 +456,7 @@ p {
     .hero__main-part__burger,
     .hero__main-part__burger-text {
       float: none;
-      width: auto; } }
+      width: 100%; } }
 
 .hero__img {
   display: inline-block;
@@ -501,6 +503,9 @@ p {
   font-family: "lifehack";
   color: #ffffff;
   text-align: left; }
+  @media screen and (max-width: 768px) {
+    .hero__main-part__text-2 {
+      text-align: center; } }
 
 .down-arrow {
   position: absolute;
@@ -543,7 +548,9 @@ p {
   background-color: #f5f2ed;
   background-size: cover;
   background-image: url("../img/bg-best.png");
-  background-position: bottom;
+  background-position: bottom; }
+
+.best__container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -552,13 +559,36 @@ p {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 3.125rem; }
 
 .best__header-text-3 {
   /* прозрачность*/
   color: #2f3234;
   text-align: center;
   display: block; }
+
+.best__main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
 
 .best__main__part {
   display: -webkit-box;
@@ -570,9 +600,10 @@ p {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -596,7 +627,6 @@ p {
 
 .best__main__part-caption-big {
   display: block;
-  height: 2.875rem;
   line-height: 1.75687rem;
   font-size: 1.50625rem;
   font-family: "lifehack";
@@ -607,8 +637,6 @@ p {
 
 .best__main__part-caption-small {
   display: block;
-  height: 1.5rem;
-  width: 18.125rem;
   line-height: 1.5rem;
   font-size: 0.875rem;
   font-family: "ubuntulight";
@@ -950,14 +978,19 @@ p {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 40.625rem; }
+  min-height: 40.625rem;
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+  max-width: 940px; }
 
 .order_title {
   color: #f8b43a;
   margin-bottom: 4.375rem; }
   @media screen and (max-width: 768px) {
     .order_title {
-      font-size: 3.75rem; } }
+      font-size: 3.75rem;
+      margin-bottom: 0.625rem; } }
 
 .form__block-title {
   color: #fff;
@@ -983,7 +1016,8 @@ p {
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column;
+      padding: 0 8.75rem; } }
 
 .form__column {
   display: -webkit-box;
@@ -1002,6 +1036,9 @@ p {
   width: 50%; }
   .form__column:first-child {
     margin-right: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .form__column {
+      width: 100%; } }
 
 .form__input {
   border: none;
@@ -1137,5 +1174,142 @@ p {
   color: #e45028;
   line-height: 1.714;
   text-align: left; }
+
+.burgers {
+  background-color: orange;
+  background-size: cover;
+  background-image: url("../img/burgers-bg.png"); }
+
+.burgers__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .burgers__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+
+.burgers__right,
+.burgers__left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 50%; }
+  @media screen and (max-width: 768px) {
+    .burgers__right,
+    .burgers__left {
+      width: 100%;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center; } }
+
+.burgers__title {
+  color: white; }
+
+.burgers__text {
+  font-size: 0.875rem;
+  font-family: 'ubuntulight';
+  line-height: 1.5rem;
+  color: #fff;
+  text-align: left; }
+  @media screen and (max-width: 768px) {
+    .burgers__text {
+      text-align: center; } }
+
+.burgers__order {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
+
+.burgers__rub {
+  font-size: 1.875rem;
+  line-height: 1.75687rem; }
+
+.burgers__price, .burgers__rub {
+  color: #e25028; }
+
+.burgers__content {
+  position: relative; }
+
+.burgers__img {
+  width: 100%;
+  display: block; }
+  @media screen and (max-width: 768px) {
+    .burgers__img {
+      width: 80%;
+      margin: auto; } }
+
+.burgers__composition {
+  background: url("../img/burgers-make-up.png") no-repeat center;
+  position: absolute;
+  top: -3.125rem;
+  left: 3.125rem;
+  width: 5.625rem;
+  height: 5.625rem; }
+  .burgers__composition:hover {
+    background: url("../img/burgers-make-up-open.png") no-repeat center;
+    width: 22.5rem;
+    height: 20.625rem; }
+  @media screen and (max-width: 768px) {
+    .burgers__composition {
+      top: -2.75rem;
+      left: 0.8125rem;
+      width: 6.25rem;
+      height: 6.25rem; } }
+
+.burgers__kkal {
+  position: absolute;
+  bottom: -4.375rem;
+  left: 3.125rem;
+  padding-top: 1.5625rem;
+  height: 5rem;
+  width: 4.375rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-family: "gagalin";
+  color: rgba(255, 255, 255, 0.502);
+  line-height: 1.875rem;
+  background: url("../img/burgers-kkal.png") no-repeat top center; }
+  @media screen and (max-width: 768px) {
+    .burgers__kkal {
+      bottom: 13.75rem;
+      left: 28.125rem; } }
 
 /*# sourceMappingURL=main.css.map */

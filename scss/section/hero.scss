@@ -12,6 +12,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: rem(10px);
   
 }
 .hero__header__left-logo {
@@ -112,18 +113,25 @@
 	}
 }
 
-
-.hero__main-part {
-  display:flex;
+.hero__main {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
   @include tablets {
     flex-direction: column;
     padding: 0 rem(150px);
   }
 }
+
+// .hero__main-part {
+//   display:flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+  
+  
+// }
 
 
 .hero__main-part__burger,
@@ -132,7 +140,7 @@
   width: 50%;
   @include tablets {
     float: none;
-    width: auto;
+    width: 100%;
   }
   // height:rem(450px);
   // width: rem(450px);
@@ -178,6 +186,9 @@
   font-family: "lifehack";
   color:#ffffff;
   text-align: left;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 // .hero__sidebar {
