@@ -32,11 +32,22 @@
 }
 
 .team-acco {
+
+	@include tablets {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	}
 }
 
 .team-acco__item {
   margin-bottom: rem(20px);
-  
+	
+	@include tablets {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+	}
   
 	&:last-child {
 		margin-bottom: 0;
@@ -45,7 +56,12 @@
 	&.active {
 		.team-acco__trigger {
 			color: $yellow;
-
+			// margin: 0 auto;
+			// width: 100%;
+			// text-align: center;
+			// display: inline-flex;
+			// flex-direction: column;
+			// align-items: center;
 			&:before {
 				transform: rotate(-180deg);
 			}
@@ -105,7 +121,14 @@
   // display: block;
   &.active {
     display: flex;
-    justify-content: space-around;
+		justify-content: space-around;
+		
+		@include tablets {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
   }
   
  
@@ -114,20 +137,30 @@
 .team-acco__pic {
 	// text-align: center;
 	width: 30%;
+	//
 	margin-right: rem(10px);
+	@include tablets {
+		margin: 0 ;
+		width: auto;
+		// margin-right: 0;
+		// width: 100%;
+	}
 }
 
 .team-acco__img {
-	width: rem(100px);
 	height: rem(100px);
+	width: rem(100px);
+	
+	// height: rem(100px);
 	@include cover;
 	border-radius: 50%;
+	
 }
 
 .team-acco__text {
   width: 70%;
   @include tablets {
-    // text-align: center;
+    text-align: center;
   }
 }
 
@@ -145,6 +178,7 @@
 	font-family:"ubuntulight";
 	color: #fff;
 	font-size: rem(14px);
+	
 }
 
 
