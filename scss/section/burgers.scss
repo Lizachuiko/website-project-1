@@ -1,7 +1,8 @@
 .burgers {
-    background-color: orange;
-    background-size: cover;
-    background-image: url("../img/burgers-bg.png");
+    // background-color: orange;
+    // background-size: cover;
+    // background-image: url("../img/burgers-bg.png");
+    background: linear-gradient(to top, #f9b43b 10%, #eb8c38 50%,  #f9b43b 90%);
   }
 
 .burgers__container {
@@ -53,6 +54,7 @@
 .burgers__rub {
     font-size: rem(30px);
     line-height: rem(28.11px);
+    margin: rem(10px);
 }
 
 .burgers__price, .burgers__rub {
@@ -113,5 +115,9 @@
     @include tablets {
         bottom: rem(220px);
         left: rem(450px) ;
+    }
+    @include phones {
+        bottom: 12.75rem;
+        left: 23.125rem;
     }
 }

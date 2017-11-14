@@ -32,6 +32,9 @@
   &:hover {
     background-color: darken(#c1401e, 15%);
   }
+  @include phones {
+    margin-left: 0;
+  }
 }
 
 .fixed-menu {

@@ -20,7 +20,11 @@
     background-image: url("../img/contacts-footer.png");
     display: flex;
     justify-content: space-between;
-    
+    @include phones {
+      flex-direction: column;
+      height: 5.75rem;
+      align-items: center;
+    }
 }
 
   
@@ -42,7 +46,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
- 
+  @include phones {
+    align-items: center;
+  }
 }
 .contacts__footer__address {
   display:inline-block;

@@ -25,7 +25,9 @@
     @include tablets {
        font-size: rem(60px) ;
        margin-bottom: rem(10px);
-       
+    }
+    @include phones {
+        text-align: center;
     }
 }
 .form__block-title {
@@ -78,6 +80,9 @@
     flex-direction: row;
     margin-bottom: rem(20px);
     justify-content: flex-start;
+    @include phones {
+        justify-content: center;
+    }
 }
 .form__block {
     flex:1;
