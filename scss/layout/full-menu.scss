@@ -1,0 +1,10 @@
+.full-menu {
+    display:none;
+    @include phones {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #2f3234;
+    }
+}
