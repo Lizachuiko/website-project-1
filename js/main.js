@@ -1,7 +1,8 @@
 $(document).ready(function() {
-
+    
     $('.team-acco__item').click(
-        function() {
+        function(e) {
+            e.preventDefault();
             $(this).toggleClass('team-acco__item__hidden');
         })
 });
