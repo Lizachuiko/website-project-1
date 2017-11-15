@@ -282,18 +282,65 @@ p {
       line-height: 4.0625rem;
       font-size: 3.75rem; } }
 
-.full-menu {
+.full-menu__container {
   display: none; }
-  @media screen and (max-width: 480px) {
-    .full-menu {
+
+@media screen and (max-width: 480px) {
+  .full-menu {
+    display: block; }
+    .full-menu .full-menu__container {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: #2f3234; } }
+      background-color: #2f3234; }
+    .full-menu .hero__container {
+      display: none; }
+    .full-menu .full-menu__logo {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 90%;
+      margin-top: 0.625rem;
+      margin-bottom: 5rem; }
+    .full-menu .full-menu__item {
+      font-size: 1.4375rem;
+      font-family: "ubunturegular";
+      color: white;
+      text-transform: uppercase;
+      line-height: 2.5rem;
+      text-align: center; }
+      .full-menu .full-menu__item:after {
+        display: block;
+        content: ' ';
+        width: 0.3125rem;
+        height: 0.3125rem;
+        border-radius: 0.15625rem;
+        background-color: #fff;
+        margin: 1.25rem auto; }
+      .full-menu .full-menu__item:last-child:after {
+        display: none; } }
 
 .hero {
   background-color: #80898e;
@@ -344,10 +391,10 @@ p {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .hero__header__right-nav {
   display: -webkit-box;
@@ -396,7 +443,7 @@ p {
   text-decoration: none;
   color: white; }
 
-.header__links {
+.header__hamburger {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,7 +474,7 @@ p {
 .hamburger-menu-link__bars, .hamburger-menu-link__bars:before, .hamburger-menu-link__bars:after {
   background: #fff;
   width: 1.5rem;
-  height: 0.3125rem;
+  height: 5px;
   border-radius: 0.1875rem; }
 
 .hamburger-menu-link__bars:before, .hamburger-menu-link__bars:after {

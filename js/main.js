@@ -33,3 +33,11 @@ $(document).ready(function() {
       multiple: false
     });
   });
+
+
+  var hero = document.getElementById('hero')
+  var hamburger = document.getElementById('hamburger')
+
+  hamburger.addEventListener('click', function() {
+      hero.classList.add('full-menu')
+  })

@@ -10,25 +10,24 @@
      <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="css/normalize.css">
 </head>
-</html>
+
 
 <body>
 <div class="wrapper">
     <div class="maincontent">
-        <section class="section hero">
-        <div class="container">
-            <div class="full-menu">
+        <section class="section hero" id="hero">
+        <div class="full-menu__container">
                 <div class="full-menu__logo">
-                    <img class="full-menu__img" src="img/logo.svg" alt="">
-                    <img class="full-menu__cross" src="img/cross.png" alt="">
+                    <a class="logo-link" href="#"><img class="full-menu__img" src="img/logo.svg" alt=""></a>
+                    <a class="cross-link" href="#"><img class="full-menu__cross" src="img/cross.png" alt=""></a>
                 </div>
                 <div class="full-menu__main">
                         <div class="full-menu__item"><a class="nav__link" href="" data-goto="1">почему мы</a></div>
                         
                         <div class="full-menu__item"><a class="nav__link" href="" data-goto="1">меню</a></div>
-                       
+                        
                         <div class="full-menu__item"><a class="nav__link" href="" data-goto="1">советы</a></div>
-                      
+                        
                         <div class="full-menu__item"><a class="nav__link" href="" data-goto="1">кто мы</a></div>
                         
                         <div class="full-menu__item"><a class="nav__link" href="" data-goto="1">свяжитесь с нами</a></div>
@@ -36,7 +35,9 @@
                         <div class="full-menu__item"><a class="nav__link" href="" data-goto="1">контакты</a></div>
                 </div>
 
-            </div>
+        </div>
+        <div class="container hero__container">
+            
 
             <header class="hero__header">
                     <div class="hero__header__left">
@@ -61,7 +62,7 @@
                         <div class="">
                                 <a class=" button__order order-link" href="" data-scroll-to="6">Заказать</a>
                         </div>
-                        <div class="header__links">
+                        <div class="header__hamburger" id="hamburger">
                             <a class="hamburger-menu-link" href="">
                                 <div class="hamburger-menu-link__bars"></div>
                             </a>
@@ -710,3 +711,4 @@
   svg4everybody();
 </script>
 </body>
+</html>
