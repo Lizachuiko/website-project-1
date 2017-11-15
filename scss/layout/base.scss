@@ -50,7 +50,9 @@ body {
   max-width: 940px;
 //   display: flex;
 //   flex-direction: column;
-  
+  @include phones {
+    width: 90%;
+  }
 }
 
 .wrapper {

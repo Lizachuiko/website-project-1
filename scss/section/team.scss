@@ -20,12 +20,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 	margin-top: rem(90px);
-	margin-left:  rem(100px);
-	margin-right:  rem(100px);
-
+	width: 70%;
+	// margin-left:  rem(100px);
+	// margin-right:  rem(100px);
+	margin-left: rem(40px);
+	@include tablets{
+		align-items: center;
+		margin-left: 0;
+		width: 100%;
+	}
+	@include phones {
+		align-items: center;
+		margin-left: 0;
+		width: 100%;
+	}
 }
+
 .team__section-team {
 	color: $yellow;
 	margin-bottom: rem(60px);
@@ -53,18 +65,31 @@
 		margin-bottom: 0;
 	}
 
-	&.active {
-		.team-acco__trigger {
-			color: $yellow;
-			// margin: 0 auto;
-			// width: 100%;
-			// text-align: center;
-			// display: inline-flex;
-			// flex-direction: column;
-			// align-items: center;
-			&:before {
-				transform: rotate(-180deg);
-			}
+	// тут было active
+}
+
+.team-acco__item__hidden {
+	.team-acco__trigger {
+		color: $yellow;
+		// margin: 0 auto;
+		// width: 100%;
+		// text-align: center;
+		// display: inline-flex;
+		// flex-direction: column;
+		// align-items: center;
+		&:before {
+			transform: rotate(-180deg);
+		}
+	}
+	.team-acco__content {
+	display: flex;
+	justify-content: space-around;
+			
+	@include tablets {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		}
 	}
 }
@@ -119,19 +144,7 @@
 	// padding-top: rem(14px);
   display: none;
   // display: block;
-  &.active {
-    display: flex;
-		justify-content: space-around;
-		
-		@include tablets {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-  }
-  
- 
+//   active
 }
 
 .team-acco__pic {
@@ -159,12 +172,10 @@
 
 .team-acco__text {
   width: 70%;
+
   @include tablets {
     text-align: center;
   }
-}
-
-.team-acco__pic, .team-acco__text {
 }
 
 .team-acco__title {
