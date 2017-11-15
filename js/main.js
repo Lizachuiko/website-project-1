@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    $('.team-acco__item').click(
+    $('.team-acco__item').click( 
         function(e) {
             e.preventDefault();
             $(this).toggleClass('team-acco__item__hidden');
@@ -43,10 +43,23 @@ $(document).ready(function() {
 
   hamburger.addEventListener('click', function() {
       hero.classList.add('full-menu')
-
-  });
+});
 
  cross.addEventListener('click', function() {
     hero.classList.remove('full-menu')
+});
 
+
+// mobile
+var review = document.getElementById('review')
+var reviewItem = document.getElementById('review-item')
+var mobileCross = document.getElementById('mobile-cross')
+
+reviewItem.addEventListener('click', function() {
+    review.classList.add('review-mobile-hidden')
+});
+
+mobileCross.addEventListener('click', function(e) {
+    e.preventDefault();
+    review.classList.remove('review-mobile-hidden')
 });
