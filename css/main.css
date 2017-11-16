@@ -1153,7 +1153,11 @@ p {
   display: flex; }
 
 .menu-acco__item {
-  height: 100%; }
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
   .menu-acco__item.active .menu-acco__trigger-text {
     color: #f8b43a; }
 
@@ -1161,7 +1165,6 @@ p {
   width: 5rem;
   display: block;
   height: 100%;
-  float: left;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1186,11 +1189,11 @@ p {
   margin-top: -1.25rem; }
 
 .menu-acco__content {
+  display: none;
+  position: relative;
   height: 100%;
-  float: left;
   background: rgba(47, 50, 52, 0.93);
-  width: 0;
-  overflow: hidden; }
+  width: 34.375rem; }
   .menu-acco__content.active {
     width: 34.375rem; }
 

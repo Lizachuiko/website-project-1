@@ -56,7 +56,7 @@
 
 .menu-acco__item {
 	height: 100%;
-
+	display: flex;
 	&.active {
 		.menu-acco__trigger-text {
 			color: $yellow;
@@ -68,7 +68,7 @@
 	width: rem(80px);
 	display: block;
 	height: 100%;
-	float: left;
+	// float: left;
 	@include cover;
 	text-decoration: none;
   position: relative;
@@ -89,15 +89,16 @@
 }
 
 .menu-acco__content {
+	display:none;
+	position: relative;
 	height: 100%;
-	float: left;
+	// float: left;
 	background: rgba(#2f3234, .93);
-	width: 0;
-    overflow: hidden;
+	width: rem(550px);
+    // overflow: hidden;
     // position: relative;
     &.active {
         width: rem(550px);
-		// width: 50%;
 	}
 }
 
@@ -110,3 +111,15 @@
   line-height: 1.8;
 //   display: none;
 }
+
+
+// .menu-acco__trigger__hidden {
+	
+// 	.menu-acco__trigger-text {
+// 		color: $yellow;
+// 	}
+// 	// .menu-acco__content {
+// 	// 	display:flex;
+// 	// }
+	
+// }
