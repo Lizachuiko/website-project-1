@@ -97,7 +97,7 @@ $(function() {
         const content = $('.menu-acco__content', item);//menu-acco__content
         const otherContent = $('.menu-acco__content', container);//
         const textBlock = $('.menu-acco__text', item);//menu-acco__text
-        const reqWidth = Math.min(textBlock.outerWidth(), 500)//
+        const reqWidth = Math.min(textBlock.outerHeight(), 500)//
 
         if (!item.hasClass('active')) {
             items.removeClass('active')
