@@ -68,31 +68,6 @@
 	// тут было active
 }
 
-.team-acco__item__hidden {
-	.team-acco__trigger {
-		color: $yellow;
-		// margin: 0 auto;
-		// width: 100%;
-		// text-align: center;
-		// display: inline-flex;
-		// flex-direction: column;
-		// align-items: center;
-		&:before {
-			transform: rotate(-180deg);
-		}
-	}
-	.team-acco__content {
-	display: flex;
-	justify-content: space-around;
-			
-	@include tablets {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		}
-	}
-}
 
 .team-acco__trigger {
 	color: #fff;
@@ -142,9 +117,21 @@
 
 .team-acco__content {
 	// padding-top: rem(14px);
-  display: none;
+//   display: none;
   // display: block;
 //   active
+	height: 0;
+	overflow: hidden;
+	transition: .5s;
+	display: flex;
+	justify-content: space-around;
+		@include tablets {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+	}
+		
 }
 
 .team-acco__pic {
@@ -189,6 +176,22 @@
 	font-family:"ubuntulight";
 	color: #fff;
 	font-size: rem(14px);
+	
+}
+
+.team-acco__item__hidden {
+	.team-acco__trigger {
+		color: $yellow;
+		// margin: 0 auto;
+		// width: 100%;
+		// text-align: center;
+		// display: inline-flex;
+		// flex-direction: column;
+		// align-items: center;
+		&:before {
+			transform: rotate(-180deg);
+		}
+	}
 	
 }
 

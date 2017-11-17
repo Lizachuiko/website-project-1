@@ -1,13 +1,40 @@
 $(document).ready(function() {
     
-    $('.team-acco__item').click( 
+    $('.team-acco__trigger').click( 
         function(e) {
             e.preventDefault();
-            $(this).toggleClass('team-acco__item__hidden');
+
+            const $this = $(e.currentTarget);
+            const container = $this.closest('.team-acco');
+            const item = $this.closest('.team-acco__item');
+            const items = $('.team-acco__item', container);
+            const content = $('.team-acco__content', item);
+            const otherContent = $('.team-acco__content', container);
+            // const textBlock = $('.acco__content-text', item);
+            // const reqHeight = textBlock.outerHeight();
+             
+            if (!item.hasClass('.team-acco__item__hidden')){
+                items.removeClass('.team-acco__item__hidden')
+                item.addClass('.team-acco__item__hidden')
+
+                otherContent.css ({
+                    'height': 0
+                })
+             
+                content.css ({
+                    'height': 100
+                })
+                               
+            } else {
+                item.removeClass('.team-acco__item__hidden');
+                content.css({
+                  'height' : 0
+                })
+            }
         })
 });
 
-
+// $(this).toggleClass('team-acco__item__hidden'); //acco работал
 // acco query
 
 // $(document).ready(function() {
