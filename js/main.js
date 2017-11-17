@@ -22,7 +22,7 @@ $(document).ready(function() {
                 })
              
                 content.css ({
-                    'height': 100
+                    'height': 150
                 })
                                
             } else {

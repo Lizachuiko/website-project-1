@@ -53,7 +53,7 @@
 }
 
 .team-acco__item {
-  margin-bottom: rem(20px);
+  	margin-bottom: rem(20px);
 	
 	@include tablets {
 		display: inline-flex;
@@ -64,11 +64,12 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+
 	&.active {
-		.acco__trigger {
-		background: $yellow;
-		&:before {
-			transform: rotate(-180deg);
+		.team-acco__trigger {
+		color: $yellow;
+			&:before {
+				transform: rotate(-180deg);
 		}
 	  }
 	}

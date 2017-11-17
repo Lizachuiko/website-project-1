@@ -1015,9 +1015,9 @@ p {
       align-items: center; } }
   .team-acco__item:last-child {
     margin-bottom: 0; }
-  .team-acco__item.active .acco__trigger {
-    background: #f8b43a; }
-    .team-acco__item.active .acco__trigger:before {
+  .team-acco__item.active .team-acco__trigger {
+    color: #f8b43a; }
+    .team-acco__item.active .team-acco__trigger:before {
       -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
       transform: rotate(-180deg); }
