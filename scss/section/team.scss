@@ -64,7 +64,14 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
-
+	&.active {
+		.acco__trigger {
+		background: $yellow;
+		&:before {
+			transform: rotate(-180deg);
+		}
+	  }
+	}
 	// тут было active
 }
 

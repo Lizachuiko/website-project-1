@@ -13,9 +13,9 @@ $(document).ready(function() {
             // const textBlock = $('.acco__content-text', item);
             // const reqHeight = textBlock.outerHeight();
              
-            if (!item.hasClass('.team-acco__item__hidden')){
-                items.removeClass('.team-acco__item__hidden')
-                item.addClass('.team-acco__item__hidden')
+            if (!item.hasClass('active')){
+                items.removeClass('active')
+                item.addClass('active')
 
                 otherContent.css ({
                     'height': 0
@@ -26,7 +26,7 @@ $(document).ready(function() {
                 })
                                
             } else {
-                item.removeClass('.team-acco__item__hidden');
+                item.removeClass('active');
                 content.css({
                   'height' : 0
                 })

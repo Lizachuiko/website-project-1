@@ -1015,6 +1015,12 @@ p {
       align-items: center; } }
   .team-acco__item:last-child {
     margin-bottom: 0; }
+  .team-acco__item.active .acco__trigger {
+    background: #f8b43a; }
+    .team-acco__item.active .acco__trigger:before {
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
 
 .team-acco__trigger {
   color: #fff;
@@ -1160,7 +1166,7 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .menu-acco__item.active .menu-acco__trigger-text {
+  .menu-acco__item.active .menu-acco__trigger {
     color: #f8b43a; }
 
 .menu-acco__trigger {
@@ -1171,11 +1177,11 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   text-decoration: none;
-  position: relative; }
+  position: relative;
+  color: #fff; }
 
 .menu-acco__trigger-text {
   font-size: 2.5rem;
-  color: #fff;
   font-family: "gagalin";
   text-align: center;
   white-space: nowrap;

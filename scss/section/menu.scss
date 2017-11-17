@@ -58,7 +58,7 @@
 	height: 100%;
 	display: flex;
 	&.active {
-		.menu-acco__trigger-text {
+		.menu-acco__trigger {
 			color: $yellow;
 		}
 	}
@@ -74,24 +74,23 @@
 	@include cover;
 	text-decoration: none;
   position: relative;
+  color: #fff;
 }
 
 .menu-acco__trigger-text {
 	font-size: rem(40px);
-	color: #fff;
 	font-family: "gagalin";
 	text-align: center;
 	white-space: nowrap;
-  position: absolute;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: 0 0;
-  left: 50%;
-  top: 100%;
-  margin-top: rem(-20px);
+	position: absolute;
+	transform: rotate(-90deg) translateY(-50%);
+	transform-origin: 0 0;
+	left: 50%;
+	top: 100%;
+	margin-top: rem(-20px);
 }
 
 .menu-acco__content {
-	
 	// position: relative;
 	height: 100%;
 	// float: left;
