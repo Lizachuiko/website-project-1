@@ -64,6 +64,8 @@
 	}
 }
 
+
+
 .menu-acco__trigger {
 	width: rem(80px);
 	display: block;
@@ -89,17 +91,18 @@
 }
 
 .menu-acco__content {
-	display:none;
-	position: relative;
+	
+	// position: relative;
 	height: 100%;
 	// float: left;
 	background: rgba(#2f3234, .93);
-	width: rem(550px);
-    // overflow: hidden;
+	width: 0;
+	overflow: hidden;
+	transition: .5s;
     // position: relative;
-    &.active {
-        width: rem(550px);
-	}
+    // &.active {
+    //     width: rem(550px);
+	// }
 }
 
 .menu-acco__text {
@@ -107,7 +110,7 @@
 	font-size: rem(14px);
 	color: #fff;
 	padding: rem(60px) rem(30px);
-	width: 100%;
+	width: 50%;
   line-height: 1.8;
 //   display: none;
 }

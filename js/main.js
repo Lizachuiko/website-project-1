@@ -60,34 +60,34 @@ mobileCross.addEventListener('click', function(e) {
 
 
 $(function() {
-    $('.acco__trigger').on('click', e => { //menu-acco__trigger
+    $('.menu-acco__trigger').on('click', e => { //menu-acco__trigger
         e.preventDefault()
 
         const $this = $(e.currentTarget); // на что жмем
-        const container = $this.closest('.acco'); //то в чем ассордеон menu-acco
-        const item = $this.closest('.acco__item'); //menu-acco__item
-        const items = $('acco__item', container);//
-        const content = $('.acco__content', item);//menu-acco__content
-        const otherContent = $('.acco__content', container);//
-        const textBlock = $('acco__content-text', item);//menu-acco__text
-        const reqHeight = textBlock.outerHeight();//
+        const container = $this.closest('.menu-acco'); //то в чем ассордеон menu-acco
+        const item = $this.closest('.menu-acco__item'); //menu-acco__item
+        const items = $('.menu-acco__item', container);//
+        const content = $('.menu-acco__content', item);//menu-acco__content
+        const otherContent = $('.menu-acco__content', container);//
+        const textBlock = $('.menu-acco__text', item);//menu-acco__text
+        const reqWidth = textBlock.outerWidth();//
 
         if (!item.hasClass('active')) {
             items.removeClass('active')
             item.addClass('active')
 
             otherContent.css({
-                'height':0
+                'width':0
             })
 
             content.css({
-                'height': reqHeight
+                'width': reqWidth
             })
 
         } else {
             item.removeClass('active');
             content.css({
-                'height':0
+                'width':0
             })
         }
         

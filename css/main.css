@@ -1189,20 +1189,20 @@ p {
   margin-top: -1.25rem; }
 
 .menu-acco__content {
-  display: none;
-  position: relative;
   height: 100%;
   background: rgba(47, 50, 52, 0.93);
-  width: 34.375rem; }
-  .menu-acco__content.active {
-    width: 34.375rem; }
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 .menu-acco__text {
   font-family: "ubuntulight";
   font-size: 0.875rem;
   color: #fff;
   padding: 3.75rem 1.875rem;
-  width: 100%;
+  width: 50%;
   line-height: 1.8; }
 
 .order {
