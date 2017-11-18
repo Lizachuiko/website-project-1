@@ -6,9 +6,19 @@
   }
 
 .burgers__container {
-    display: flex;
+    
+    display:flex;
     justify-content: center;
     width: 90%;
+    // width:rem(1000px);
+    margin: 0 auto;
+    position: relative;
+    // width: 95%;
+    // min-width: 940px;
+    // overflow: hidden;
+    @include phones {
+      width: 90%;
+    }
     @include tablets {
         flex-direction: column;
         align-items: center;
