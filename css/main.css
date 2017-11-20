@@ -345,6 +345,13 @@ p {
       .full-menu .full-menu__item:last-child:after {
         display: none; } }
 
+.slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
 .slider__controls {
   position: absolute;
   width: 100%;
@@ -357,23 +364,14 @@ p {
 
 .slider__btn-next {
   display: block;
+  right: 1.25rem; }
+
+.slider__btn-prev {
+  display: block;
   left: 1.25rem;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
-
-.slider__btn-prev {
-  display: block;
-  right: 1.25rem; }
-
-.burgers__slider {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  margin: auto;
-  width: 62.5rem; }
 
 .burgers__slider-box {
   position: relative;
@@ -381,15 +379,31 @@ p {
   margin: auto;
   height: 370px; }
 
-.burgers__slider-one {
-  background-color: red;
+.slider__list {
+  position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.burgers__slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 62.5rem; }
+
+.burgers__slider-one {
+  background-color: red; }
 
 .burgers__slider-two {
-  background-color: green;
-  top: 0;
-  left: 1000px; }
+  background-color: green; }
+
+.burgers__slider-three {
+  background-color: blueviolet; }
 
 .hero {
   background-color: #80898e;
