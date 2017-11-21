@@ -377,16 +377,18 @@ p {
   position: relative;
   width: 90%;
   margin: auto;
-  height: 370px; }
+  height: 100%;
+  overflow: hidden; }
 
 .slider__list {
   position: absolute;
-  top: 0;
+  top: 25vh;
   left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin: auto 0; }
 
 .burgers__slider {
   display: -webkit-box;

@@ -200,7 +200,7 @@ $(function () {
     $('.slider__btn').on('click', function(e){
         e.preventDefault();
 
-        var $this = $(this),
+        const $this = $(this),
             container = $this.closest('.slider'),
             items = container.find('.burgers__slider'),
             activeItem = items.filter('.active'),

@@ -54,22 +54,23 @@
     width: 90%;
     // height: 900px;
     margin: auto;
-    height: 370px;
-    // overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 .slider__list {
     position: absolute;
-    top:0;
+    top:25vh;
     left:0;
     display: flex;
+    margin: auto 0;
 }
 
 .burgers__slider {
     display: flex;
     // height: 900px;
     // height: 90%;
-    // width: 90%;
+    // width: 100%;
     margin:auto;
     width:rem(1000px);
     // height: rem(600px);
