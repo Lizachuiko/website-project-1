@@ -382,10 +382,13 @@ p {
 
 .burgers__slider-box {
   position: relative;
-  width: 90%;
+  width: 60rem;
   margin: auto;
   height: 100%;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .burgers__slider-box {
+      width: 39.5rem; } }
 
 .slider__list {
   position: absolute;
@@ -404,6 +407,9 @@ p {
   display: flex;
   margin: auto;
   width: 62.5rem; }
+  @media screen and (max-width: 768px) {
+    .burgers__slider {
+      width: 39.5rem; } }
 
 .burgers__slider-one {
   background-color: red; }

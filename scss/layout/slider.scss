@@ -51,11 +51,14 @@
 
 .burgers__slider-box {
     position: relative;
-    width: 90%;
+    width: 60rem;
     // height: 900px;
     margin: auto;
     height: 100%;
     overflow: hidden;
+    @include tablets {
+        width: 39.5rem;
+    }
 }
 
 .slider__list {
@@ -73,6 +76,9 @@
     // width: 100%;
     margin:auto;
     width:rem(1000px);
+    @include tablets {
+        width: 39.5rem;
+    }
     // height: rem(600px);
     // overflow: hidden;
 }
