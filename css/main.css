@@ -146,7 +146,7 @@ body {
   overflow: hidden; }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   position: relative;
   display: -webkit-box;
@@ -406,10 +406,13 @@ p {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  width: 62.5rem; }
+  width: 60rem; }
   @media screen and (max-width: 768px) {
     .burgers__slider {
       width: 39.5rem; } }
+  @media screen and (max-width: 480px) {
+    .burgers__slider {
+      width: 31.5rem; } }
 
 .burgers__slider-one {
   background-color: red; }

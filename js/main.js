@@ -188,7 +188,7 @@ $(function () {
         if (reqItem.length) {
 
             list.animate({
-                'left' : -reqIndex * 1000 + 'px' 
+                'left' : -reqIndex * 100 + '%' 
             }, duration, function () {
                 activeSlide.removeClass('active');
                 reqItem.addClass('active');
