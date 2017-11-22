@@ -232,3 +232,81 @@ $(function () {
     });
 
 });
+
+    const display = $('.maincontent')
+    const sections = $('.section')
+
+    let inScroll = false;
+
+    const menuActiveclass = sectionEq => {
+        $('.fixed-menu__item').eq(sectionEq).addClass('active')
+            .siblings().removeClass('active');
+    }
+
+
+ const PerformTransition = sectionEq => {
+    
+
+    if (inScroll) return  
+        inScroll = true
+        
+        const position = (sectionEq * -100) + '%';
+
+        display.css({
+            'transform' : `translateY(${position})`,
+            '-webkit-transform' :  `translateY(${position})`
+        })
+        sections.eq(sectionEq).addClass('active')
+            .siblings().removeClass('active');
+
+
+            
+        setTimeout(() => {
+            inScroll = false;
+            menuActiveclass(sectionEq);
+        }, 1300);
+    
+ } 
+
+ const defineSec = sections => {
+    const activeSec = sections.filter('.active')
+    return {
+        activeSec: activeSec,
+        nextSec: activeSec.next(),
+        prevSec: activeSec.prev()
+    }
+ }
+
+    $('.wrapper').on('wheel', e => {
+        const deltaY = e.originalEvent.deltaY 
+        const section = defineSec(sections)
+        // const activeSec = sections.filter('.active')
+        // const nextSec = activeSec.next()
+        // const prevSec = activeSec.prev()
+
+        if (deltaY > 0 && section.nextSec.length ) { //down
+            PerformTransition(section.nextSec.index())
+        } 
+
+        if (deltaY < 0 && section.prevSec.length ) { //up
+            PerformTransition(section.prevSec.index())
+        }
+    })
+
+$(document).on('keydown', e => {
+    const section = defineSec(sections);
+
+    if(inScroll) return
+
+    switch (e.keyCode) {
+        case 40: // вверх
+          if (!section.nextSec.length) return;
+          PerformTransition(section.nextSec.index());
+          break;
+    
+        case 38: //вниз
+          if (!section.prevSec.length) return;
+          PerformTransition(section.prevSec.index());
+          break;
+      }
+})
