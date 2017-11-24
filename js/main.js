@@ -277,20 +277,23 @@ $(function () {
     }
  }
 
-    $('.wrapper').on('wheel', e => {
-        const deltaY = e.originalEvent.deltaY 
-        const section = defineSec(sections)
-        // const activeSec = sections.filter('.active')
-        // const nextSec = activeSec.next()
-        // const prevSec = activeSec.prev()
-
-        if (deltaY > 0 && section.nextSec.length ) { //down
-            PerformTransition(section.nextSec.index())
-        } 
-
-        if (deltaY < 0 && section.prevSec.length ) { //up
-            PerformTransition(section.prevSec.index())
-        }
+    $('.wrapper').on({
+        wheel : e => {
+            const deltaY = e.originalEvent.deltaY 
+            const section = defineSec(sections)
+            // const activeSec = sections.filter('.active')
+            // const nextSec = activeSec.next()
+            // const prevSec = activeSec.prev()
+    
+            if (deltaY > 0 && section.nextSec.length ) { //down
+                PerformTransition(section.nextSec.index())
+            } 
+    
+            if (deltaY < 0 && section.prevSec.length ) { //up
+                PerformTransition(section.prevSec.index())
+            }
+        },
+        touchmove: e => (e.preventDefault())
     })
 
 $(document).on('keydown', e => {

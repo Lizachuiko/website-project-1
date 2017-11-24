@@ -31,6 +31,10 @@ body {
   min-height: rem(650px);
   transition: 1s;
   will-change: transform;
+
+  @include tablets  {
+    min-height: auto;
+  }
 }
 
 
@@ -41,6 +45,10 @@ body {
   height: 100%;
   min-height: 650px;
   overflow: hidden;
+  
+  @include tablets  {
+    min-height: auto;
+  }
 }
 //   .section {
 //       height: 100%;
