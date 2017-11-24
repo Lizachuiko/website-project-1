@@ -156,6 +156,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .section {
+      min-height: initial; } }
 
 .container {
   margin: 0 auto;
