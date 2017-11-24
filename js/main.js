@@ -238,6 +238,10 @@ $(function () {
 
     let inScroll = false;
 
+    const mobileDetect = new MobileDetect(window.navigator.userAgent);
+    const isMobile = mobileDetect.mobile();
+
+
     const menuActiveclass = sectionEq => {
         $('.fixed-menu__item').eq(sectionEq).addClass('active')
             .siblings().removeClass('active');
@@ -277,24 +281,46 @@ $(function () {
     }
  }
 
+ const scrollToSection = direction => {
+    const section = defineSec (sections)
+  
+    if (inScroll) return;
+  
+    if (direction === 'up' && section.nextSec.length) { // вниз
+        PerformTransition(section.nextSec.index())
+    }
+  
+    if (direction === 'down' && section.prevSec.length) { // вверх
+        PerformTransition(section.prevSec.index())
+    }
+  }
+
     $('.wrapper').on({
         wheel : e => {
             const deltaY = e.originalEvent.deltaY 
-            const section = defineSec(sections)
+            let direction = (deltaY > 0) 
+            ? 'up' 
+            : 'down'
+      
+          scrollToSection(direction);
+        },
+            // const section = defineSec(sections)
+
             // const activeSec = sections.filter('.active')
             // const nextSec = activeSec.next()
             // const prevSec = activeSec.prev()
     
-            if (deltaY > 0 && section.nextSec.length ) { //down
-                PerformTransition(section.nextSec.index())
-            } 
+            // if (deltaY > 0 && section.nextSec.length ) { //down
+            //     PerformTransition(section.nextSec.index())
+            // } 
     
-            if (deltaY < 0 && section.prevSec.length ) { //up
-                PerformTransition(section.prevSec.index())
-            }
-        },
+            // if (deltaY < 0 && section.prevSec.length ) { //up
+            //     PerformTransition(section.prevSec.index())
+            // }
+        // },
         touchmove: e => (e.preventDefault())
-    })
+        
+    });
 
 $(document).on('keydown', e => {
     const section = defineSec(sections);
@@ -451,9 +477,18 @@ function initMap() {
     //     icon: image
     // });
 
- $('[data-scroll-to]').on('click', e => {
+ $('[data-scroll-to]').on('click touchstart', e => {
      e.preventDefault();
      const $this = $(e.currentTarget);
      const indexSec = parseInt($this.attr('data-scroll-to'),);
      PerformTransition(indexSec);
  })
+
+ if (isMobile) {
+ $(window).swipe ({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        console.log(direction);
+        scrollToSection(direction);
+      }
+ })
+}
