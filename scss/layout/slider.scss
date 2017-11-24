@@ -67,6 +67,9 @@
     left:0;
     display: flex;
     margin: auto 0;
+    @include tablets {
+        top: 15vh;
+    }
 }
 
 .burgers__slider {

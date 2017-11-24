@@ -399,6 +399,9 @@ p {
   display: -ms-flexbox;
   display: flex;
   margin: auto 0; }
+  @media screen and (max-width: 768px) {
+    .slider__list {
+      top: 15vh; } }
 
 .burgers__slider {
   display: -webkit-box;
@@ -1117,7 +1120,7 @@ p {
   align-items: center; }
   @media screen and (max-width: 768px) {
     .team-acco__trigger {
-      font-size: 1.5625rem; } }
+      font-size: 1.25rem; } }
   .team-acco__trigger:before, .team-acco__trigger:after {
     content: "";
     display: block;
@@ -1536,6 +1539,10 @@ p {
   color: #e45028;
   line-height: 1.714;
   text-align: left; }
+
+#map {
+  height: 92%;
+  width: 100%; }
 
 .burgers {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #f9b43b), color-stop(50%, #eb8c38), color-stop(90%, #f9b43b));

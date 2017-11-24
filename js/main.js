@@ -22,7 +22,7 @@ $(document).ready(function() {
                 })
              
                 content.css ({
-                    'height': 150
+                    'height': 110
                 })
                                
             } else {
@@ -309,4 +309,148 @@ $(document).on('keydown', e => {
           PerformTransition(section.prevSec.index());
           break;
       }
-})
+});
+
+
+function initMap() {
+    var idMap = document.getElementById('map');
+    var image = 'img/marker.png';
+    var style = [
+        {
+            "featureType": "administrative",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "visibility": "on"
+                }
+            ]
+        },
+        {
+            "featureType": "road.local",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "on"
+                }
+            ]
+        },
+        {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#3f518c"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                },
+                {
+                    "color": "#84afa3"
+                },
+                {
+                    "lightness": 52
+                }
+            ]
+        }
+    ];
+    var uluru = {
+        lat:59.939095, 
+        lng: 30.315868
+    };
+    var map = new google.maps.Map(idMap, {
+        center: uluru,
+        zoom: 12,
+        styles: style
+    });
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    var locations = [
+        { lat: 59.991118, lng: 30.261438},
+        { lat: 59.964433, lng: 30.350212}
+     ]
+
+    var markers = locations.map(function(location, i) {
+        return new google.maps.Marker({
+          position: location,
+          icon: image
+        });
+      });
+
+       var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+       };
+
+
+    
+    // var marker = new google.maps.Marker({
+    //     position: uluru,
+    //     map:map,
+    //     icon: image
+    // });
+
+ $('[data-scroll-to]').on('click', e => {
+     e.preventDefault();
+     const $this = $(e.currentTarget);
+     const indexSec = parseInt($this.attr('data-scroll-to'),);
+     PerformTransition(indexSec);
+ })
