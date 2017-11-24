@@ -233,6 +233,8 @@ $(function () {
 
 });
 
+// scroll
+
     const display = $('.maincontent')
     const sections = $('.section')
 
@@ -297,7 +299,7 @@ $(function () {
 
     $('.wrapper').on({
         wheel : e => {
-            const deltaY = e.originalEvent.deltaY 
+            const deltaY = e.originalEvent.deltaY;
             let direction = (deltaY > 0) 
             ? 'up' 
             : 'down'
@@ -339,6 +341,23 @@ $(document).on('keydown', e => {
           break;
       }
 });
+
+if (isMobile) {
+    $(window).swipe ({
+       swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+           console.log(direction);
+           scrollToSection(direction);
+         }
+    })
+}
+
+$('[data-scroll-to]').on('click touchstart', e => {
+    e.preventDefault();
+    const $this = $(e.currentTarget);
+    const indexSec = parseInt($this.attr('data-scroll-to'),);
+    PerformTransition(indexSec);
+})
+
 
 
 function initMap() {
@@ -477,18 +496,4 @@ function initMap() {
     //     icon: image
     // });
 
- $('[data-scroll-to]').on('click touchstart', e => {
-     e.preventDefault();
-     const $this = $(e.currentTarget);
-     const indexSec = parseInt($this.attr('data-scroll-to'),);
-     PerformTransition(indexSec);
- })
-
- if (isMobile) {
- $(window).swipe ({
-    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-        console.log(direction);
-        scrollToSection(direction);
-      }
- })
-}
+ 
