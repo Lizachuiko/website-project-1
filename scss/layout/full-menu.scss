@@ -1,13 +1,9 @@
-// .hero__container {
-//     @include phones {
-//     display:none;
-//     }
-// }
+
 .full-menu__container {
     display:none;
 }
 
-.full-menu  {   
+.full-menu  {
     @include phones {
     display: block;
 
@@ -38,7 +34,7 @@
         text-transform: uppercase;
         line-height: rem(40px);
         text-align: center;
-        
+
         &:after {
             display: block;
             // vertical-align: middle;
@@ -50,8 +46,5 @@
             display: none;
           }
       }
-      
-    
-    
     }
 }

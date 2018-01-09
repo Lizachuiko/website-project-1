@@ -1,7 +1,4 @@
 .burgers {
-    // background-color: orange;
-    // background-size: cover;
-    // background-image: url("../img/burgers-bg.png");
     background: linear-gradient(to top, #f9b43b 10%, #eb8c38 50%,  #f9b43b 90%);
   }
 
@@ -10,12 +7,8 @@
     display:flex;
     justify-content: center;
     width: 90%;
-    // width:rem(1000px);
     margin: 0 auto;
     position: relative;
-    // width: 95%;
-    // min-width: 940px;
-    // overflow: hidden;
     @include phones {
       width: 90%;
     }
@@ -52,7 +45,6 @@
     text-align: left;
     @include tablets {
         text-align: center;
-        // padding: rem(0px) (70px);
     }
 }
 

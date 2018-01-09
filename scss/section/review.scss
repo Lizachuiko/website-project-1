@@ -3,9 +3,6 @@
 	height: 100%;
 	width: 100%;
 
-	// @include phones {
-	// 	display: none;
-	// }
 }
 
 .reviews__list {
@@ -152,13 +149,12 @@
 			padding: rem(15px);
 			opacity: 1;
 		}
-		
+
 		.mobile-head {
 			display: flex;
 			justify-content: space-between;
-			
 		}
-		
+
 	}
 }
 

@@ -48,8 +48,6 @@
 }
 
 .best__main__part-pic {
-//   height: rem(100px);
-//   width: rem(110px);
   @include phones {
     width: 40%;
   }
@@ -61,20 +59,10 @@
   max-height: 100%;
 }
 
-// .pic-1 {
-//   background: url("../img/meat.svg") no-repeat 50% 50%;
-// }
-// .pic-2 {
-//   background: url("../img/hand.svg") no-repeat 50% 50%;
-// }
-// .pic-3 {
-//   background: url("../img/natural.svg") no-repeat 50% 50%;
-// }
 
 .best__text {
   @include phones {
     width: 90%;
-    // text-align: right;
     margin-bottom: 10%;
   }
 }
@@ -98,8 +86,6 @@
 
 .best__main__part-caption-small {
   display:block;
-  // height: rem(24px);
-  // width: rem(290px); 
   line-height: rem(24px);
   font-size: rem(14px);
   font-family: "ubuntulight";
@@ -107,6 +93,5 @@
   text-align: center;
   @include phones {
     text-align: left;
-    // line-height: rem(20px);
   }
 }

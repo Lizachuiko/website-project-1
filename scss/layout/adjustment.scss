@@ -7,14 +7,14 @@
 
   
 }
-.visually_hidden {    
-  position: absolute; 
-  overflow: hidden;   
-  clip: rect(0 0 0 0);    
-  height: rem(1px);    
-  width: rem(1px); 
-  margin: -rem(1px);   
-  padding: 0; 
+.visually_hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: rem(1px);
+  width: rem(1px);
+  margin: -rem(1px);
+  padding: 0;
   border: 0;
 }
 
@@ -41,7 +41,7 @@
 	position: fixed;
 	top: rem(90px);
   right: rem(40px);
-  
+
   @include tablets {
     display: none;
   }
@@ -104,13 +104,10 @@
 }
 
 .text {
-  // display:block;
-  // height: rem(90px);
   line-height: rem(85px);
   font-size: rem(72px);
   font-family: "gagalin";
   text-transform: uppercase;
-  // text-align: left;
   @include tablets {
     line-height: rem(65px);
     font-size: rem(60px);
