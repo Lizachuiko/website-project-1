@@ -85,12 +85,10 @@
 	position: relative;
   display: inline-flex;
   margin-bottom: rem(20px);
-  align-items: center;  
+  align-items: center;
   
   @include tablets() {
     font-size: rem(20px);
-    
-    
   }
 
 	&:before, &:after {
